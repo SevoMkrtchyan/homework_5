@@ -31,7 +31,6 @@ public class QuestionsServlet extends HttpServlet {
         Poll poll = pollDao.findById(pollId);
         if (poll != null) {
             List<Question> byPollId = questionDao.findByPollId(pollId);
-            byPollId.forEach(e -> e.setAnswers(answerDao.findByQuestionId(e.getId())));
             req.setAttribute("poll", poll);
             req.setAttribute("questions", byPollId);
             req.getRequestDispatcher("question.jsp").forward(req, resp);
