@@ -22,4 +22,4 @@ jobs:
         cache: maven
         
     - name: Test project Build with Maven
-      run: mvn -B clean install --file pom.xml
+      run: mvn clean install
