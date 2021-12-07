@@ -23,3 +23,6 @@ jobs:
         
     - name: Test project Build with Maven
       run: mvn clean install
+      
+    - name: Print Message
+      run : echo "CI Pipeline part Finished successfully!"
